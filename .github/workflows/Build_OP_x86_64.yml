@@ -65,12 +65,12 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Mentohust
+    - name: 第三方插件
       working-directory: ./openwrt
       run: |
         git clone https://github.com/BoringCat/luci-app-mentohust.git
         git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
-        git clone https://github.com/Ameykyl/luci-app-koolproxyR          
+        git clone https://github.com/Ameykyl/luci-app-koolproxyR.git          
 
     - name: Configuration Customization - Build_x86_64
       env:
