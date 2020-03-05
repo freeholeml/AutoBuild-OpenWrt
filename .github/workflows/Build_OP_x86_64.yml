@@ -1,14 +1,14 @@
 #=================================================
 
-name: Build_x86_64_NAT6
+name: Build_x86_64_IPv6
 
 on: 
   release:
     types: [published]
 
-  #push:
-    #branches: 
-      #- master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 8 * * 5
