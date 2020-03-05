@@ -65,15 +65,12 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Mentohust_depends
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
-
     - name: Mentohust
       working-directory: ./openwrt
       run: |
-        git clone https://github.com/BoringCat/luci-app-mentohust.git          
+        git clone https://github.com/BoringCat/luci-app-mentohust.git
+        git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
+        git clone https://github.com/Ameykyl/luci-app-koolproxyR          
 
     - name: Configuration Customization - Build_x86_64
       env:
