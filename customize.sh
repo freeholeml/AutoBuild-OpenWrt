@@ -9,7 +9,7 @@
 sed -i 's/192.168.1.1/192.168.2.10/g' openwrt/package/base-files/files/bin/config_generate
 
 #2. 自定义插件
-cd ./package/lean
+cd /openwrt/package/lean
 
 echo "koolproxyR"
 if [ ! -d "./koolproxyR" ];then
