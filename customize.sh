@@ -6,13 +6,10 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 #1. Modify default IP
-sed -i 's/192.168.1.1/192.168.5.1/g' openwrt/package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.10/g' openwrt/package/base-files/files/bin/config_generate
 
-
-if [ ! -d "./package/myapp" ];then
-mkdir ./package/myapp
-fi
-cd ./package/myapp
+#2. 自定义插件
+cd ./package/lean
 
 echo "koolproxyR"
 if [ ! -d "./koolproxyR" ];then
