@@ -6,9 +6,9 @@ on:
   release:
     types: [published]
 
-  push:
-    branches: 
-      - master
+  #push:
+    #branches: 
+      #- master
 
   #schedule:
   #  - cron: 0 8 * * 5
@@ -63,14 +63,7 @@ jobs:
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        ./scripts/feeds install -a
-
-    - name: 第三方插件
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/BoringCat/luci-app-mentohust.git
-        git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
-        git clone https://github.com/Ameykyl/luci-app-koolproxyR.git          
+        ./scripts/feeds install -a         
 
     - name: Configuration Customization - Build_x86_64
       env:
