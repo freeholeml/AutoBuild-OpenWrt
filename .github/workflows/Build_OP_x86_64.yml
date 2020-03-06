@@ -58,7 +58,7 @@ jobs:
         REPO_BRANCH: master
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
     
-    - name: 自定义第三方插件主题
+    - name: 自定义第三方插件
       run: |
           cd ./openwrt/package
           mkdir openwrt-packages
@@ -66,6 +66,7 @@ jobs:
           git clone https://github.com/tzxiaozhen88/koolproxyR.git
           git clone https://github.com/BoringCat/luci-app-mentohust.git
           git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
+          git clone https://github.com/vernesong/OpenClash.git
 
     - name: Update & Install feeds
       working-directory: ./openwrt
