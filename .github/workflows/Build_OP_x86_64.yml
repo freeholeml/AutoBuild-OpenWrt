@@ -9,7 +9,7 @@ on:
       - master
 
   #schedule:
-  #  - cron: 55 10 * * *
+  #  - cron: 25 11 * * *
   
   #watch:
   #  types: [started]
